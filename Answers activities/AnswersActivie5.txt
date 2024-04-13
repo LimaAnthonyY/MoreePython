@@ -1,0 +1,67 @@
+x = np.arange(0, 100, 1)
+y=x**2+2*x+2
+
+plt.plot(x,y)
+
+
+
+x = np.arange(0, 500, 1)
+y=(x**3)+(3*(x**2))-(2*x)-1
+
+plt.plot(x,y, color='orange')
+plt.title('$y= x^3+3x^2−2x−1$', fontsize=21)
+
+
+
+x = np.linspace(0, 10, 100)
+y1 = np.linspace(0, 50, 100)**2 - 100*x + 100
+y2 = np.linspace(10, 20, 100)**2 + 500
+plt.rcParams.update(plt.rcParamsDefault) 
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Dados fornecidos para plotar o gráfico
+x = np.linspace(0, 10, 100)
+y1 = np.linspace(0, 50, 100)**2 - 100*x + 100
+y2 = np.linspace(10, 20, 100)**2 + 500
+
+# Criação do gráfico
+#plt.figure(figsize=(10, 6))
+plt.plot(x, y1, 'b--') # Linha tracejada azul para y1
+plt.plot(x, y2, 'r-.') # Linha pontilhada vermelha para y2
+plt.title('Y1 vs. Y2')
+
+plt.show()
+
+
+
+x1 = np.arange(100)
+y1 = np.arange(100)**2 + 2*x1
+
+x2 = np.arange(100)
+y2 = np.arange(100)*2
+
+fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(6, 3))
+
+ax[0].plot(x1, y1, color='r', label='G1')
+ax[0].set_title("Gráfico 1", fontsize=9)
+ax[0].set_xticks(np.arange(False))
+ax[0].legend()
+
+ax[1].plot(x2, y2, color='b')
+ax[1].set_title("Gráfico 2", fontsize=13)
+ax[1].set_yticks(np.arange(False))
+                              
+fig.tight_layout()  # ajuste automático dos gráficos à área selecionada
+
+plt.savefig("grafico.pdf")
+plt.show()
+
+
+
+# https://matplotlib.org/3.1.1/api/axes_api.html
+
+# https://colab.research.google.com/github/ageron/handson-ml/blob/master/tools_matplotlib.ipynb#scrollTo=LRD051wSLRTI
+
+# https://acervolima.com/estilos-de-linha-em-matplotlib-python/
